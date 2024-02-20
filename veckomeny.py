@@ -14,7 +14,7 @@ lines = [ x for x in div.get_text().split('\n')
             x == 'Mån' or
             x == 'Tis' or
             x == 'Ons' or
-            x == 'Tor' or
+            x == 'Tors' or
             x == 'Fre'
           )
         ]
@@ -25,4 +25,12 @@ wed_i = lines.index('Onsdag')
 thu_i = lines.index('Torsdag')
 fri_i = lines.index('Fredag')
 
-print(f"{lines[mon_i:tue_i]}")
+days = []
+
+days.append(lines[mon_i:tue_i])
+days.append(lines[tue_i:wed_i])
+days.append(lines[wed_i:thu_i])
+days.append(lines[thu_i:fri_i])
+days.append(lines[fri_i:])
+
+print(f"{days}")
