@@ -33,4 +33,9 @@ days.append(lines[wed_i:thu_i])
 days.append(lines[thu_i:fri_i])
 days.append(lines[fri_i:])
 
-print(f"{days}")
+print(f"{lines[0]}")
+for d in days:
+  print("")
+  print(f"{d[0]} {d[1]}")
+  for f in d[2:]:
+    print(f"gillar inte: {f}")
